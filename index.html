@@ -1,54 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/icon.png" />
     <title>Hayato's Portfolio</title>
   </head>
-  <body>
-    <h1 style="font-size: 10rem">ポートフォリオ</h1>
 
+  <body>
     <header>
+      <div class="header_logo">
+        <a href=""><img src="./images/logo.png" alt="ロゴ"></a>
+      </div>
+
+      <!-- ハンバーガーメニューのアイコン -->
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
       <nav>
         <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
           <li><a href="#works">WORKS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#award">AWARD</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </header>
 
-    <div id="home" class="main_image">
-      <img src="" alt="メイン画像">
-    </div>
-
     <main>
-      <div id="about" class="main_contents">
-        <h2>ABOUT</h2>
-        <div class="main_contents_profile">
-          <div class="main_contents_profile_text">
-            <h3>プロフィール</h3>
-            <p>ふじたはやと</p>
+      <h1>Hayato's<br>Po<span class="space">rtf</span>olio</h1>
+
+      <div id="home" class="main_image">
+        <div class="cover-box"></div>
+      </div>
+      
+      <div class="main_wrapper">
+        <div id="works" class="main_contents">
+          <h2>WORKS</h2> 
+          <div class="main_contents_works">
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail02.png" alt="作品1">
+                <div class="works_item_tag">
+                  <p>#アーティストサイト</p>
+                  <p>#ファンサイト</p>
+                </div>
+                <div class="works_item_title">
+                  <p>Eve Fansite</p>
+                </div>
+              </a>
+            </div>
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail03.png" alt="作品2">
+                <div class="works_item_tag">
+                  <p>#観光サイト</p>
+                  <p>#お台場</p>
+                </div>
+                <div class="works_item_title">
+                  <p>お台場 観光サイト</p>
+                </div>
+              </a>
+            </div>
           </div>
-          <img src="" alt="プロフィール画像">
-        </div>
-      </div>
+          
+          <div class="main_contents_works">
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail04.png" alt="作品3">
+                <div class="works_item_tag">
+                  <p>#カフェサイト</p>
+                  <p>#架空</p>
+                </div>
+                <div class="works_item_title">
+                  <p>Nicoru Cafeサイト</p>
+                </div>
+              </a>
+            </div>
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail05.png" alt="作品4">
+                <div class="works_item_tag">
+                  <p>#洋服紹介サイト</p>
+                  <p>#自分の○○サイト</p>
+                </div>
+                <div class="works_item_title">
+                  <p>Hayato's Summer Clothes Collection</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="main_contents_works">
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail06.png" alt="作品5">
+                <div class="works_item_tag">
+                  <p>#お店紹介サイト</p>
+                  <p>#ファンサイト</p>
+                </div>
+                <div class="works_item_title">
+                  <p>小倉庵 ファンサイト</p>
+                </div>
+              </a>
+            </div>
+            <div class="main_contents_works_item">
+              <a href="">
+                <img src="./images/site_thumbnail07.png" alt="作品6">
+                <div class="works_item_tag">
+                  <p>#カード型レイアウト</p>
+                  <p>#ファンサイト</p>
+                </div>
+                <div class="works_item_title">
+                  <p>ポケモン図鑑 ～赤・緑～</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-      <div id="works" class="main_contents">
-        <h2>WORKS</h2> 
-      </div>
+          <div id="about" class="main_contents">
+            <h2>ABOUT</h2>
+            <div class="main_contents_profile">
+              <img src="./images/profile.jpg" alt="プロフィール画像">
+              <div class="main_contents_profile_text">
+                <p class="text_name_ja">藤田　颯斗</p>
+                <p class="text_name_en">Hayato Fujita</p>
+                <p class="text_info">現在、HAL東京のIT学部WEB学科でWebサイト制作を学んでいます。これまで学んだ知識を活かし、実際にWeb制作を行いながらスキルを磨いています。学内コンテストでは、2回の受賞経験があり、挑戦を通じて成長を実感しています。私の目標は、ユーザーが「もう一度見たくなるようなWebサイト」を作ることです。見やすく、使いやすく、そして印象に残るデザインで、より多くの方に喜んでいただけるWebサイトを提供できるよう取り組んでいます。</p>
+                <div class="text_tag">
+                  <p>#html</p>
+                  <p>#css</p>
+                  <p>#javascript</p>
+                  <p>#php</p>
+                  <p>#wordpress</p>
+                  <p>#illustrator</p>
+                </div>
+                <div class="text_tag">
+                  <p>#アーティストサイト　構成力賞</p>
+                  <p>#商品紹介サイト　構成力賞</p>
+                </div>
+                <div class="text_tag">
+                  <p>#東京都出身</p>
+                  <p>#2003年10月生まれ</p>
+                  <p>#お酒と映画と運動が好き</p>
+                </div>
+                <!-- <div class="text_more">
+                  <a href="#">ABOUT MORE 〉</a>
+                </div> -->
+              </div>
+            </div>
+          </div>  
 
-      <div id="contact" class="main_contents">
-        <h2>CONTACT</h2>
+          <div id="award" class="main_contents">
+            <h2>AWARD</h2>
+            <div class="main_contents_award">
+              <div class="award_image">
+                <img src="./images/award01.png" alt="賞状1">
+                <p>アーティストサイト「Eveさんのファンサイト」</p>
+              </div>
+              <div class="award_image">
+                <img src="./images/award02.png" alt="賞状2">
+                <p>商品紹介サイト「ポケモングッズのECサイト」</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact" class="main_contents">
+            <h2>CONTACT</h2>
+            <div class="contact_text">
+              <p>ご覧いただきありがとうございます。</p>
+              <p>下記のメールアドレスに、お気軽にお問い合わせください。</p>
+            </div>
+            <div class="contact_address">
+              <a href="mailto:fujitahayato868@gmail.com">fujitahayato868@gmail.com</a>
+            </div>
+          </div>
+          
       </div>
     </main>
 
     <footer>
       <p>&copy; 2024 Hayato's Portfolio</p>
     </footer>
-
-    <br/><a href="https://nicoruson.github.io/site01/">観光サイト</a>
-    <br/><a href="./works/oguraan/index.html">さいと</a>
+    
+    <script src="./js/main.js"></script>
   </body>
 </html>
