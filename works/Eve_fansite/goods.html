@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./image/logo.jpeg">
+    <title>GOODS｜Eve - unofficial site</title>
+</head>
+
+<style>
+/* discography_wrapper をフレックスボックスにして上揃え */
+.discography_wrapper {
+    display: flex;
+    align-items: flex-start; /* 上で揃える */
+    gap: 50px; /* メニューとコンテンツの間隔 */
+    padding: 20px;
+}
+
+/* メニューを縦並びに */
+.discography_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.discography_menu ul li {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-align: left;
+    display: block;
+    width: 150px;
+    transition: 0.2s ease;
+    letter-spacing: 2px;
+
+}
+
+.discography_menu ul li:hover {
+    background-color: #888888;
+    color: #000;
+}
+
+.discography_menu ul li.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* discography_menu を固定（スクロール時に残る） */
+.discography_menu {
+    position: sticky;
+    top: 245px; /* 上から20pxの位置で固定 */
+    height: fit-content;
+}
+
+/* discography_box を3列均等に配置 */
+.discography_area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    gap: 30px; /* 余白を少し減らす */
+    width: 100%; /* 横幅を最大限活かす */
+}
+
+/* ディスコグラフィのボックス */
+.discography_box {
+    /* background: #f5f5f5; */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* しっかり幅を取る */
+}
+
+.discography_box a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.discography_box a:hover {
+    opacity: 0.7;
+}
+
+/* 画像サイズを大きく */
+.discography_box img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形に統一 */
+    object-fit: contain; /* 画像を切り取らずに全体を表示 */
+    border: 1px solid #aaaaaa;
+}
+
+/* テキスト部分 */
+.discography_box p {
+    color: #fff;
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.discography_box p:nth-of-type(1) {
+    font-size: 14px;
+}
+
+
+/* スマホ（600px以下）の場合は2列に */
+@media (max-width: 980px) {
+    .discography_wrapper {
+        flex-direction: column; /* スマホでは縦並び */
+        align-items: center;
+    }
+
+    .discography_menu {
+        position: static; /* スマホでは固定解除 */
+        width: 100%;
+        text-align: center;
+    }
+
+    .discography_menu ul {
+        display: flex;
+    }
+
+    .discography_menu ul li {
+        font-size: 14px;
+        padding: 10px 5px;
+        letter-spacing: 1px;
+        text-align: center;
+
+    }
+
+    /* .discography_menu ul li {
+        display: inline-block;
+        width: auto;
+        padding: 10px 15px;
+    } */
+
+    .discography_area {
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2列 */
+    }
+
+    .discography_box p {
+        color: #fff;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .discography_box p:nth-of-type(1) {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+</style>
+
+<body>
+<header>
+    <div class="header_logo">
+        <a href="./index.html"><img src="./image/logo.jpeg" alt="ロゴ"></a>
+    </div>
+
+    <!-- ハンバーガーメニューアイコン -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<!-- メニューエリア -->
+<div class="menu">
+    <a href="./index.html">TOP</a>
+    <a href="./news.html">NEWS</a>
+    <a href="./profile.html">PROFILE</a>
+    <a href="./discography.html">DISCOGRAPHY</a>
+    <a href="./goods.html">GOODS</a>
+</div>
+
+<!-- オーバーレイ -->
+<div class="overlay" onclick="toggleMenu()"></div>
+
+<main>
+    <div class="main_contents_wrapper">
+        <div class="contents_title">
+            <p>GOODS</p>
+        </div>
+        <div class="discography_wrapper">
+            <div class="discography_menu">
+                <ul>
+                    <li>ALL</li>
+                    <li>Tシャツ</li>
+                    <li>バッグ</li>
+                    <li>タオル</li>
+                    <li>バンド</li>
+                </ul>
+            </div>
+            <div class="discography_area">
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods01.png" alt="グッズ画像１">
+                    <p>LAYERED BLACK-T</p>
+                    <p>レイヤード黒T</p>
+                    <p>￥6,000</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods02.png" alt="グッズ画像2">
+                    <p>LAYERED WHITE-T</p>
+                    <p>レイヤード黒T</p>
+                    <p>￥6,000</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods03.png" alt="グッズ画像１">
+                    <p>INSOMNYA-T</p>
+                    <p>インソムにゃT</p>
+                    <p>￥5,000</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods04.png" alt="グッズ画像１">
+                    <p>「saikai」T</p>
+                    <p>「再邂」T</p>
+                    <p>￥3,900</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods05.png" alt="グッズ画像１">
+                    <p>TOUR T BLACK</p>
+                    <p>TOUR T BLACK</p>
+                    <p>￥4,500</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods06.png" alt="グッズ画像１">
+                    <p>TOUR T</p>
+                    <p>ツアーT</p>
+                    <p>￥3,800</p></a>
+                </div>
+                <div class="discography_box" data-category="Tシャツ">
+                    <a href =""><img src="./image/goods07.png" alt="グッズ画像１">
+                    <p>LOGO T</p>
+                    <p>ロゴTシャツ</p>
+                    <p>￥3,800</p></a>
+                </div>
+                <div class="discography_box" data-category="バッグ">
+                    <a href =""><img src="./image/goods08.jpg" alt="グッズ画像１">
+                    <p>BLACK CAT HANDBAG with CHARM SET 黒猫ハンドバッグ チャームセット付き</p>
+                    <p>黒猫ハンドバッグ チャームセット付き</p>
+                    <p>￥7,500</p></a>
+                </div>
+                <div class="discography_box" data-category="バッグ">
+                    <a href =""><img src="./image/goods09.jpg" alt="グッズ画像１">
+                    <p>BLACK TOTE</p>
+                    <p>黒トート</p>
+                    <p>￥3,800</p></a>
+                </div>
+                <div class="discography_box" data-category="タオル">
+                    <a href =""><img src="./image/goods10.jpg" alt="グッズ画像１">
+                    <p>"lazy cat" TOWEL</p>
+                    <p>「lazy cat」タオル</p>
+                    <p>￥2,800</p></a>
+                </div>
+                <div class="discography_box" data-category="タオル">
+                    <a href =""><img src="./image/goods11.png" alt="グッズ画像１">
+                    <p>INSOMNIA TOWEL</p>
+                    <p>インソムニアタオル</p>
+                    <p>￥2,500</p></a>
+                </div>
+                <div class="discography_box" data-category="タオル">
+                    <a href =""><img src="./image/goods12.png" alt="グッズ画像１">
+                    <p>Eater's MUFFLER TOWEL</p>
+                    <p>食者のマフラータオル</p>
+                    <p>￥1,600</p></a>
+                </div>
+                <div class="discography_box" data-category="タオル">
+                    <a href =""><img src="./image/goods13.png" alt="グッズ画像１">
+                    <p>neko TOWEL</p>
+                    <p>ネコタオル</p>
+                    <p>￥2,500</p></a>
+                </div>
+                <div class="discography_box" data-category="タオル">
+                    <a href =""><img src="./image/goods14.jpg" alt="グッズ画像１">
+                    <p>MUFFLER TOWEL</p>
+                    <p>マフラータオル</p>
+                    <p>￥1,800</p></a>
+                </div>
+                <div class="discography_box" data-category="バンド">
+                    <a href =""><img src="./image/goods15.jpg" alt="グッズ画像１">
+                    <p class="goods_name_a">bdkn rubber band</p>
+                    <p class="goods_name_b">《日替わり》武道館ラババン</p>
+                    <p class="goods_name_c">￥500</p></a>
+                </div>
+                <div class="discography_box" data-category="バンド">
+                    <a href =""><img src="./image/goods16.jpg" alt="グッズ画像１">
+                    <p>rubber band</p>
+                    <p>会場別　ラババン</p>
+                    <p>￥500</p></a>
+                </div>
+                <div class="discography_box" data-category="バンド">
+                    <a href =""><img src="./image/goods17.jpg" alt="グッズ画像１">
+                    <p>BLACK CAT RUBBER BAND</p>
+                    <p>黒猫ラババン</p>
+                    <p>￥700</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer_wrapper">
+        <ul>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./profile.html">PROFILE</a></li>
+            <li><a href="./discography.html">DISCOGRAPHY</a></li>
+            <li><a href="./goods.html">GOODS</a></li>
+        </ul>
+        <p>© Eve / &copy; 2025 Fujita Hayato</p>
+        <p class="site_warning">このサイトは「Eve - OFFICIAL SITE」のファンサイトです。</p>
+    </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".discography_menu ul li");
+    const discographyItems = document.querySelectorAll(".discography_box");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            // すべてのメニュー項目の `active` クラスを削除
+            menuItems.forEach(i => i.classList.remove("active"));
+            this.classList.add("active");
+
+            // 選択されたカテゴリーを取得
+            const category = this.textContent.trim();
+
+            // フィルタリング
+            discographyItems.forEach(box => {
+                if (category === "ALL" || box.dataset.category === category) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+            });
+        });
+    });
+
+    // 初期状態で "ALL" を選択
+    menuItems[0].classList.add("active");
+});
+
+</script>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

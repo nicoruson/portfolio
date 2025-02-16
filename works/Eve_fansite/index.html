@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./image/logo.jpeg">
+    <title>Eve - unofficial site</title>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <img src="./image/slide01.jpg" alt="Slide 1" class="slide">
+    <img src="./image/slide02.jpg" alt="Slide 2" class="slide">
+    <img src="./image/slide03.jpg" alt="Slide 3" class="slide">
+    <img src="./image/slide04.jpg" alt="Slide 4" class="slide">
+    <img src="./image/slide05.jpg" alt="Slide 5" class="slide">
+    <img src="./image/slide06.jpg" alt="Slide 6" class="slide">
+    <img src="./image/slide07.jpg" alt="Slide 7" class="slide">
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
+
+<!-- ハンバーガーメニューアイコン -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- メニューエリア -->
+<div class="menu">
+    <a href="./index.html">TOP</a>
+    <a href="./news.html">NEWS</a>
+    <a href="./profile.html">PROFILE</a>
+    <a href="./discography.html">DISCOGRAPHY</a>
+    <a href="./goods.html">GOODS</a>
+</div>
+
+<!-- オーバーレイ -->
+<div class="overlay" onclick="toggleMenu()"></div>
+
+<main>
+    <div class="main_wrapper">
+        <div class="main_news">
+            <h2>NEWS</h2>
+            <a href=""><p>2025.02.08<br>【企画展】Eve Experience Live 2025「蒼像」開催決定</p></a>
+            <a href=""><p>2025.01.31<br>”花星 × 劇場アニメ『メイクアガール』” スペシャル映像が公開</p></a>
+            <a href=""><p>2025.01.02<br>“Eve New Year 2025 Live Streaming [虎狼来・花嵐] on YouTube” プレミア公開が決定</p></a>
+            <a href=""><p>2025.12.24<br>”さよならエンドロール” Music Video 公開</p></a>
+            <div class="news_more">
+                <a href="./news.html">MORE →</a>
+            </div>
+        </div>
+
+        <div class="main_contents">
+            <h2>CONTENTS</h2>
+            <div class="contents_wrapper">
+                <div class="contents_box">
+                    <a href="./profile.html"><img src="./image/contents01.png" alt="PROFILE"><p>PROFILE</p></a>
+                </div>
+
+                <div class="contents_box">
+                    <a href="./discography.html"><img src="./image/contents02.png" alt="DISCOGRAPHY"><p>DISCOGRAPHY</p></a>
+                </div>
+
+                <div class="contents_box">
+                    <a href="./goods.html"><img src="./image/contents03.png" alt="GOODS"><p>GOODS</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer_wrapper">
+        <ul>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./profile.html">PROFILE</a></li>
+            <li><a href="./discography.html">DISCOGRAPHY</a></li>
+            <li><a href="./goods.html">GOODS</a></li>
+        </ul>
+    <p>© Eve / &copy; 2025 Fujita Hayato</p>
+    <p class="site_warning">このサイトは「Eve - OFFICIAL SITE」のファンサイトです。</p>
+</footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
