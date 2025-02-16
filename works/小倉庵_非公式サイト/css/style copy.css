@@ -1,0 +1,284 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yuji Syuku", serif;
+    display: flex;
+    background-color: rgb(255, 240, 225);
+    overflow-x: hidden; /* 横スクロールを無効にする */
+}
+
+.yuji-syuku-regular {
+    font-family: "Yuji Syuku", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #8f2727;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.vertical-nav {
+    writing-mode: vertical-rl;
+    margin-top: 20px;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    margin: 0 0 0 10px;
+}
+
+.vertical-nav li {
+    margin: 10px 5px;
+}
+
+.vertical-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.sns-icons {
+    display: flex;
+    gap: 30px;
+    margin: 350px 0 0 10px;
+}
+
+.sns-icons a {
+    display: block;
+    font-size: 40px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.main-content {
+    margin-left: 250px; /* 左カラムを避けて残りの幅を占める */
+    width: calc(100vw - 250px); /* ビューポート幅からサイドバー幅を引く */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden; /* 横スクロールを無効にする */
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 画面全体の幅を指定 */
+    height: 100vh;
+    z-index: -1; /* スライドショーをメインコンテンツの背面に配置 */
+    background-color: #000;
+    overflow: hidden; /* スライドが画面外に出ないように設定 */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide-animation 24s infinite;
+}
+
+@keyframes slide-animation {
+    0% { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 8s; }
+.slide:nth-child(3) { animation-delay: 16s; }
+
+.main_wrapper {
+    margin: 1000px 0 0 0;
+}
+
+.main-nav ul {
+    /* display: flex;
+    justify-content: space-around; */
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.main-nav li {
+    margin: 10px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.content-section {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; */
+    margin-bottom: 20px;
+}
+
+.section-title {
+    writing-mode: vertical-rl;
+    font-size: 96px;
+    margin: 0 50px;
+    /* margin-top: 100px; */
+}
+
+/* 各セクションに上下の余白を設定 */
+.section-first, .section-second, .section-third, .section-forth {
+    margin: 20px 0;
+}
+
+/* section-first と section-third を右寄せ */
+.section-first, .section-third {
+    text-align: right; /* テキストを右寄せ */
+    margin-right: 50px; /* 右の余白を調整 */
+    display: flex;
+}
+
+.section-first .section-title{
+    margin-left: 50px;
+    position: relative;
+    bottom: 200px;
+}
+
+/* section-second と section-forth はそのまま左寄せ */
+.section-second, .section-forth {
+    text-align: left; /* これらは左寄せ */
+    margin-left: 50px; /* 左の余白を調整 */
+    display: flex;
+    margin-top: 150px;
+}
+
+/* section-first と section-third を右寄せの列として設定 */
+.section-first, .section-third {
+    justify-self: end; /* セクションを右側に配置 */
+}
+
+.section-second, .section-forth {
+    justify-self: start; /* セクションを左側に配置 */
+}
+
+.section-box {
+    display: flex;
+    /* margin-top: 100px; */
+    align-items: center;
+}
+
+.section-box img {
+    width: 350px;
+    height: 250px;
+}
+
+.section-box p {
+    font-size: 24px;
+    margin: 0  20px;
+    text-align: left;
+}
+
+.section-box-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-box-re {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.section-box-re img {
+    width: 350px;
+    height: 250px;
+}
+
+.section-box-re p {
+    font-size: 24px;
+    margin: 0  20px;
+    text-align: left;
+}
+
+.section-daily {
+    display: flex;
+}
+
+.daily-top {
+    font-size: 42px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.daily-bottom {
+    font-size: 24px;
+    text-align: right;
+}
+
+.section-daily img {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+}
+
+.section-third-box {
+    margin-right: 200px;
+}
+
+.section-third img {
+    margin: 30px 30px;
+}
+
+.section-third p{
+    font-size: 36px;
+}
+
+.title-third {
+    position: relative;
+    bottom: 250px;
+}
+
+.title-forth {
+    position: relative;
+    top: 70px;
+}
+
+.box {
+    background-color: #e4e4e4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
