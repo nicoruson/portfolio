@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カード型レイアウトのサイト</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style-pc.css">
+    <link rel="stylesheet" href="./css/style-sp.css" media="(width < 600px)">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <div class="wrapper">
+        <header class="header">
+            <img src="./images/header_img01.PNG">
+            <div class="header_titlenav">
+                <h1 class="dot-font">ポケモン図鑑</h1>
+                <p class="sub-title">- ポケットモンスター 赤・緑 -</p>
+                <nav class="header_nav">
+                    <ul>
+                        <li><a href="#zukan">図鑑</a></li>
+                        <li><a href="#omikuji">おみくじ</a></li>
+                    </ul>
+            </div>
+            <img src="./images/header_img02.PNG">
+        </header>
+
+        <div class="main_wrapper">
+            <h2 id="zukan">カントー地方のポケモン</h2>
+
+            <main class="main" id="card-container">
+                <!-- main.jsに書いてるよ -->
+            </main>
+
+            <div class="omikuji-game" id="omikuji">
+                <p>ポケモンおみくじ</p>
+                <p id="omikuji-result"></p>
+                <div id="omikuji-pokemon">
+                    <img id="omikuji-pokemon-img" src="" alt="ポケモン画像">
+                    <p id="omikuji-pokemon-name"></p>
+                    <p id="omikuji-comment"></p>
+                </div>
+                <button id="omikuji-button">おみくじを引く</button>
+            </div>
+                   
+        </div>
+
+        <div class="top-button">
+            <a href="#top"><img src="./images/top-button.png"></a>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 ポケットモンスター 赤・緑　ポケモン図鑑</p>
+        </footer>
+    </div>
+
+    <!-- ポケモンの詳細 -->
+    <div id="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-img-container">
+                    <img id="popup-img" src="" alt="ポケモン画像">
+                    <div class="popup-idsound">
+                        <div class="popup-id" id="popup-id">No.</div>
+                        <button class="play-sound-button">▶</button>
+                    </div>
+                </div>
+                <div class="popup-info">
+                    <p id="popup-name">ポケモン名</p>
+                    <p id="popup-category">分類</p>
+                    <p id="popup-type">タイプ</p>
+                    <p id="popup-height">高さ</p>
+                    <p id="popup-weight">重さ</p>
+                </div>
+            </div>
+            <div class="popup-description" id="popup-description">
+                ポケモンの説明
+            </div>
+        </div>
+        <span id="close-popup" class="close-popup">&times;</span>
+
+    </div>     
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

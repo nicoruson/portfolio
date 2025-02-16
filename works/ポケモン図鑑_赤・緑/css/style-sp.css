@@ -1,0 +1,232 @@
+/* ベース */
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+/* ヘッダー */
+.header {
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.header img {
+  width: 200px;
+  margin: 0;
+}
+
+.header_titlenav {
+  height: 200px;
+  margin: 0 0 50px 0;
+}
+
+.header h1 {
+  font-size: 46px;
+  margin: 20px 100px;
+  position: relative;
+  top: 10px;
+}
+
+.sub-title {
+  font-size: 18px;
+  position: relative;
+  bottom: 10px;
+}
+
+.header_nav {
+  width: 300px;
+  margin: 0 auto;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.header_nav ul{
+  display: flex;
+  border: 5px solid #333;
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px 0;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.header_nav ul li {
+  
+  position: relative; /* 子要素の位置指定のため */
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 0 25px;
+}
+
+.header_nav ul li a {
+  display: block; /* aタグをブロック要素化 */
+}
+
+.header_nav ul li a:hover::before {
+  content: "▶"; /* ▶を表示 */
+  position: absolute; /* li内の左に配置 */
+  top: 5px;
+  left: -5px; /* liの左から少し離す */
+  color: #333; /* 矢印の色 */
+  font-size: 24px; /* 矢印のサイズ */
+  line-height: 1; /* 高さを調整 */
+}
+
+/* メイン */
+.main_wrapper {
+  padding: 25px;
+}
+
+.main_wrapper::before {
+  margin: 20px auto;
+}
+
+.main_wrapper h2{
+  margin-bottom: 10px;
+}
+
+.main {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+
+/* ポケモン全部並べるとこ */
+.card {
+  transform: scale(0.8);
+}
+
+.card_text {
+  font-size: 1.0rem;
+  padding: 10px;
+}
+
+/* ポケモン１匹のとこ */
+#popup {
+  padding: 10px;
+}
+
+.popup-content {
+  width: 90%;
+  height: 500px;
+  border: 5px solid #b8a8b9;  
+  margin-top: 60px;
+}
+
+.popup-header {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  height: 400px;
+}
+
+.popup-img-container {
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.popup-img-container img {
+  width: 160px;
+}
+
+.popup-idsound {
+  align-items: center;
+}
+
+.popup-id {
+  font-size: 18px;
+}
+
+.play-sound-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 0px;
+}
+
+.popup-info {
+  position: relative;
+  bottom: 15px;
+}
+
+.popup-info p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+#popup-name {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+#popup-category {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.popup-description {
+  font-size: 15px;
+  padding: 14px 25px;
+  position: relative;
+  bottom: 4px;
+  line-height: 1.6
+}
+
+.popup-description::before {
+  height: 2px;
+}
+
+.close-popup {
+  font-size: 5rem;
+  top: 50px;
+  right: 25px;
+}
+
+/* トップに戻る */
+.top-button img {
+  width: 60px;
+}
+
+/* おみくじ */
+.omikuji-game {
+  margin: 80px 0 20px 0;
+  padding: 20px;
+  background-color: #f8e4fa;
+  border: 5px solid #333;
+}
+
+.omikuji-game p {
+  font-size: 28px;
+}
+
+.omikuji-game #omikuji-result {
+  font-size: 42px;
+}
+
+.omikuji-game #omikuji-pokemon-img {
+  width: 150px;
+  height: 150px;
+}
+
+.omikuji-game #omikuji-pokemon-name {
+  font-size: 20px;
+}
+
+.omikuji-game #omikuji-comment {
+  font-size: 24px;
+  color: #000;
+}
+
+.omikuji-game #omikuji-button {
+  font-size: 24px;
+}
+
+/* フッター */
+.footer p {
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+}
