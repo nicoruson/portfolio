@@ -130,7 +130,7 @@ h1 br {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1); /* 白いボックス */
+  background-color: #f7f7f7; /* 白いボックス */
   animation: slideBox 1.5s ease-out forwards; /* ボックスを右にスライド */
   z-index: 10; /* 画像の上にボックスが重なるようにz-indexを設定 */
 }
